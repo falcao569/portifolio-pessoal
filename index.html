@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - João Paulo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h1>João Paulo</h1>
+        <p>Desenvolvedor Front-End | Especialista em WordPress</p>
+    </section>
+    <section id="about">
+        <h2>Sobre Mim</h2>
+        <p>Sou formado em Análise e Desenvolvimento de Sistemas e trabalho há mais de 3 anos com WordPress e desenvolvimento web.</p>
+    </section>
+    <section id="projects">
+        <h2>Projetos</h2>
+        <div class="project-grid">
+            <div class="project-card">Projeto 1</div>
+            <div class="project-card">Projeto 2</div>
+            <div class="project-card">Projeto 3</div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Email: joaopaulo@email.com</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 João Paulo</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("nav ul li a");
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
