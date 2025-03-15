@@ -3,68 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Pessoal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="container">
-            <h1>Steve Milner</h1>
-            <h2>Web Designer</h2>
-            <p>Desenvolvedor front-end focado em experiências limpas e amigáveis.</p>
-            <button>Mais Sobre Mim</button>
+            <h1 class="logo">Meu Portfólio</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#features">Destaques</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#steps">Passos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     
-    <section class="about">
+    <section class="hero">
         <div class="container">
-            <h2>Sobre Mim</h2>
-            <div class="info-grid">
-                <p><strong>Idade:</strong> 27 anos</p>
-                <p><strong>Nacionalidade:</strong> Tunisiano</p>
-                <p><strong>Email:</strong> you@mail.com</p>
-                <p><strong>Idiomas:</strong> Francês, Inglês</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="skills">
-        <div class="container">
-            <h2>Minhas Habilidades</h2>
-            <div class="skills-grid">
-                <p>HTML: 25%</p>
-                <p>JavaScript: 89%</p>
-                <p>CSS: 70%</p>
-                <p>PHP: 66%</p>
-                <p>WordPress: 95%</p>
-                <p>jQuery: 50%</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="portfolio">
-        <div class="container">
-            <h2>Meu Portfólio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item"><img src="project1.jpg" alt="Projeto 1"></div>
-                <div class="portfolio-item"><img src="project2.jpg" alt="Projeto 2"></div>
-                <div class="portfolio-item"><img src="project3.jpg" alt="Projeto 3"></div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <form>
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu Email" required>
-                <textarea placeholder="Sua Mensagem" required></textarea>
-                <button type="submit">Enviar Mensagem</button>
+            <h2>Website Landing Page Wireframe</h2>
+            <p>Transforme ideias em designs incríveis com HTML, CSS e JavaScript.</p>
+            <form class="search-bar">
+                <input type="text" placeholder="Digite algo...">
+                <button type="submit">Buscar</button>
             </form>
         </div>
     </section>
     
-    <script src="script.js"></script>
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Destaques</h2>
+            <p>Principais características do meu trabalho.</p>
+            <div class="feature-grid">
+                <div class="feature-item">Imagem 1</div>
+                <div class="feature-item">Imagem 2</div>
+                <div class="feature-item">Imagem 3</div>
+                <div class="feature-item">Imagem 4</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="steps" class="steps">
+        <div class="container">
+            <h2>Passos do Processo</h2>
+            <div class="steps-grid">
+                <div class="step">Passo 1</div>
+                <div class="step">Passo 2</div>
+                <div class="step">Passo 3</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form>
+                <input type="text" placeholder="Seu Nome">
+                <input type="email" placeholder="Seu E-mail">
+                <textarea placeholder="Sua Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Meu Nome - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
