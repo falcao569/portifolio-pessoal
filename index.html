@@ -1,146 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steve Milner - Web Designer</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfólio Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&auto=format&fit=crop&q=80" alt="Profile Image">
-            </div>
-            <div class="hero-text">
-                <h1>I'M STEVE MILNER.</h1>
-                <h2>WEB DESIGNER</h2>
-                <p>I'm a human-focused designer & front-end developer focused on crafting clean & user-friendly experiences. I am passionate about building excellent software that improves the lives of those around me.</p>
-                <button class="btn">MORE ABOUT ME</button>
-            </div>
+    <header>
+        <div class="container">
+            <h1>Steve Milner</h1>
+            <h2>Web Designer</h2>
+            <p>Desenvolvedor front-end focado em experiências limpas e amigáveis.</p>
+            <button>Mais Sobre Mim</button>
         </div>
     </header>
-
-    <section id="about" class="about">
-        <h2>ABOUT <span>ME</span></h2>
-        <div class="personal-info">
-            <div class="info-left">
-                <h3>PERSONAL INFOS</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span>First Name:</span> Steve
-                    </div>
-                    <div class="info-item">
-                        <span>Age:</span> 27 Years
-                    </div>
-                    <div class="info-item">
-                        <span>Phone:</span> +1 234 567 8900
-                    </div>
-                    <div class="info-item">
-                        <span>Address:</span> New York
-                    </div>
-                </div>
-                <button class="btn">DOWNLOAD CV</button>
-            </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <span class="number">12+</span>
-                    <span class="label">EXPERIENCE</span>
-                </div>
-                <div class="stat-item">
-                    <span class="number">97+</span>
-                    <span class="label">PROJECTS</span>
-                </div>
-                <div class="stat-item">
-                    <span class="number">81+</span>
-                    <span class="label">CLIENTS</span>
-                </div>
-                <div class="stat-item">
-                    <span class="number">53+</span>
-                    <span class="label">AWARDS</span>
-                </div>
+    
+    <section class="about">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="info-grid">
+                <p><strong>Idade:</strong> 27 anos</p>
+                <p><strong>Nacionalidade:</strong> Tunisiano</p>
+                <p><strong>Email:</strong> you@mail.com</p>
+                <p><strong>Idiomas:</strong> Francês, Inglês</p>
             </div>
         </div>
-
-        <div class="skills">
-            <h3>MY SKILLS</h3>
+    </section>
+    
+    <section class="skills">
+        <div class="container">
+            <h2>Minhas Habilidades</h2>
             <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span>HTML</span>
-                        <span>25%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" data-percent="25"></div>
-                    </div>
-                </div>
-                <!-- More skills similar to above -->
-            </div>
-        </div>
-
-        <div class="experience">
-            <h3>EXPERIENCE & EDUCATION</h3>
-            <div class="timeline">
-                <!-- Timeline items will be populated by JavaScript -->
+                <p>HTML: 25%</p>
+                <p>JavaScript: 89%</p>
+                <p>CSS: 70%</p>
+                <p>PHP: 66%</p>
+                <p>WordPress: 95%</p>
+                <p>jQuery: 50%</p>
             </div>
         </div>
     </section>
-
-    <section id="portfolio" class="portfolio">
-        <h2>MY <span>PORTFOLIO</span></h2>
-        <div class="portfolio-filters">
-            <button class="filter-btn active" data-filter="all">ALL</button>
-            <button class="filter-btn" data-filter="logo">LOGO</button>
-            <button class="filter-btn" data-filter="graphic">GRAPHIC DESIGN</button>
-            <button class="filter-btn" data-filter="mockup">MOCKUP</button>
-        </div>
-        <div class="portfolio-grid">
-            <!-- Portfolio items will be populated by JavaScript -->
+    
+    <section class="portfolio">
+        <div class="container">
+            <h2>Meu Portfólio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item"><img src="project1.jpg" alt="Projeto 1"></div>
+                <div class="portfolio-item"><img src="project2.jpg" alt="Projeto 2"></div>
+                <div class="portfolio-item"><img src="project3.jpg" alt="Projeto 3"></div>
+            </div>
         </div>
     </section>
-
-    <section id="contact" class="contact">
-        <h2>GET IN <span>TOUCH</span></h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>DON'T BE SHY !</h3>
-                <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="location-icon"></i>
-                        <div>
-                            <h4>ADDRESS</h4>
-                            <p>123 Street New York City, United States Of America</p>
-                        </div>
-                    </div>
-                    <!-- More contact details -->
-                </div>
-            </div>
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="YOUR NAME" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="YOUR EMAIL" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="YOUR SUBJECT" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="YOUR MESSAGE" required></textarea>
-                </div>
-                <button type="submit" class="btn">SEND MESSAGE</button>
+    
+    <section class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <textarea placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
             </form>
         </div>
     </section>
-
-    <section id="blog" class="blog">
-        <h2>MY <span>BLOG</span></h2>
-        <div class="blog-grid">
-            <!-- Blog items will be populated by JavaScript -->
-        </div>
-    </section>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
