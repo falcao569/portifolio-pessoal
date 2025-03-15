@@ -1,45 +1,40 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const button = document.querySelector("button");
-    if (button) {
-        button.addEventListener("click", function() {
-            alert("Mais informações em breve!");
-        });
-    }
-
-    const form = document.querySelector("form");
-    if (form) {
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("Mensagem enviada com sucesso!");
-            form.reset();
-        });
-    }
-
-    // Adicionando efeito de rolagem suave
-    document.querySelectorAll("a[href^='#']").forEach(anchor => {
+document.addEventListener("DOMContentLoaded", () => {
+    // Efeito de rolagem suave para os links do menu
+    document.querySelectorAll(".nav ul li a").forEach(anchor => {
         anchor.addEventListener("click", function(event) {
             event.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            if (target) {
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
                 window.scrollTo({
-                    top: target.offsetTop,
+                    top: targetElement.offsetTop - 50,
                     behavior: "smooth"
                 });
             }
         });
     });
 
-    // Animação ao rolar a página
-    const sections = document.querySelectorAll("section");
+    // Animação de entrada nos elementos conforme aparecem na tela
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
+                entry.target.classList.add("show");
             }
         });
-    }, { threshold: 0.1 });
-    
-    sections.forEach(section => {
-        observer.observe(section);
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".feature-item, .step").forEach(element => {
+        observer.observe(element);
+    });
+
+    // Efeito de hover nos botões
+    document.querySelectorAll("button").forEach(button => {
+        button.addEventListener("mouseover", () => {
+            button.style.transform = "scale(1.05)";
+            button.style.transition = "transform 0.3s";
+        });
+        button.addEventListener("mouseout", () => {
+            button.style.transform = "scale(1)";
+        });
     });
 });
