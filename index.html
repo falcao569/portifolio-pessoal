@@ -1,57 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - João Paulo</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Steve Milner - Web Designer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&auto=format&fit=crop&q=80" alt="Profile Image">
+            </div>
+            <div class="hero-text">
+                <h1>I'M STEVE MILNER.</h1>
+                <h2>WEB DESIGNER</h2>
+                <p>I'm a human-focused designer & front-end developer focused on crafting clean & user-friendly experiences. I am passionate about building excellent software that improves the lives of those around me.</p>
+                <button class="btn">MORE ABOUT ME</button>
+            </div>
+        </div>
     </header>
-    <section id="hero">
-        <h1>João Paulo</h1>
-        <p>Desenvolvedor Front-End | Especialista em WordPress</p>
-    </section>
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <p>Sou formado em Análise e Desenvolvimento de Sistemas e trabalho há mais de 3 anos com WordPress e desenvolvimento web.</p>
-    </section>
-    <section id="projects">
-        <h2>Projetos</h2>
-        <div class="project-grid">
-            <div class="project-card">Projeto 1</div>
-            <div class="project-card">Projeto 2</div>
-            <div class="project-card">Projeto 3</div>
+
+    <section id="about" class="about">
+        <h2>ABOUT <span>ME</span></h2>
+        <div class="personal-info">
+            <div class="info-left">
+                <h3>PERSONAL INFOS</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span>First Name:</span> Steve
+                    </div>
+                    <div class="info-item">
+                        <span>Age:</span> 27 Years
+                    </div>
+                    <div class="info-item">
+                        <span>Phone:</span> +1 234 567 8900
+                    </div>
+                    <div class="info-item">
+                        <span>Address:</span> New York
+                    </div>
+                </div>
+                <button class="btn">DOWNLOAD CV</button>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="number">12+</span>
+                    <span class="label">EXPERIENCE</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">97+</span>
+                    <span class="label">PROJECTS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">81+</span>
+                    <span class="label">CLIENTS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">53+</span>
+                    <span class="label">AWARDS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills">
+            <h3>MY SKILLS</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>HTML</span>
+                        <span>25%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-percent="25"></div>
+                    </div>
+                </div>
+                <!-- More skills similar to above -->
+            </div>
+        </div>
+
+        <div class="experience">
+            <h3>EXPERIENCE & EDUCATION</h3>
+            <div class="timeline">
+                <!-- Timeline items will be populated by JavaScript -->
+            </div>
         </div>
     </section>
-    <section id="contact">
-        <h2>Contato</h2>
-        <p>Email: joaopaulo@email.com</p>
+
+    <section id="portfolio" class="portfolio">
+        <h2>MY <span>PORTFOLIO</span></h2>
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="logo">LOGO</button>
+            <button class="filter-btn" data-filter="graphic">GRAPHIC DESIGN</button>
+            <button class="filter-btn" data-filter="mockup">MOCKUP</button>
+        </div>
+        <div class="portfolio-grid">
+            <!-- Portfolio items will be populated by JavaScript -->
+        </div>
     </section>
-    <footer>
-        <p>&copy; 2025 João Paulo</p>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const links = document.querySelectorAll("nav ul li a");
-            links.forEach(link => {
-                link.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute("href")).scrollIntoView({
-                        behavior: "smooth"
-                    });
-                });
-            });
-        });
-    </script>
+
+    <section id="contact" class="contact">
+        <h2>GET IN <span>TOUCH</span></h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>DON'T BE SHY !</h3>
+                <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="location-icon"></i>
+                        <div>
+                            <h4>ADDRESS</h4>
+                            <p>123 Street New York City, United States Of America</p>
+                        </div>
+                    </div>
+                    <!-- More contact details -->
+                </div>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="YOUR NAME" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="YOUR EMAIL" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="YOUR SUBJECT" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="YOUR MESSAGE" required></textarea>
+                </div>
+                <button type="submit" class="btn">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <h2>MY <span>BLOG</span></h2>
+        <div class="blog-grid">
+            <!-- Blog items will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
