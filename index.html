@@ -1,76 +1,142 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Landing Page Wireframe</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Meu Portfólio</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#features">Destaques</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#steps">Passos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">LOGO</div>
+      <div class="nav-links">
+        <a href="#" class="nav-link">Features</a>
+        <a href="#" class="nav-link">Pricing</a>
+        <a href="#" class="nav-link">Resources</a>
+        <a href="#" class="nav-link">About</a>
+      </div>
+      <button class="btn-primary">Sign In</button>
+    </nav>
+  </header>
+
+  <main>
     <section class="hero">
-        <div class="container">
-            <h2>Website Landing Page Wireframe</h2>
-            <p>Transforme ideias em designs incríveis com HTML, CSS e JavaScript.</p>
-            <form class="search-bar">
-                <input type="text" placeholder="Digite algo...">
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
+      <h1>Website Landing Page<br>Wireframe.</h1>
+      <p class="hero-text">Test out your wireframe and prototype of a landing page website. Share your design with your
+        team and get feedback before development starts.</p>
+      <div class="search-box">
+        <input type="text" placeholder="Enter your email..." class="search-input">
+        <button class="btn-primary">Send</button>
+      </div>
     </section>
-    
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Destaques</h2>
-            <p>Principais características do meu trabalho.</p>
-            <div class="feature-grid">
-                <div class="feature-item">Imagem 1</div>
-                <div class="feature-item">Imagem 2</div>
-                <div class="feature-item">Imagem 3</div>
-                <div class="feature-item">Imagem 4</div>
+
+    <section class="features">
+      <h2>Features</h2>
+      <div class="hierarchical-grid">
+        <div class="grid-item grid-item-large">
+          <div class="placeholder-img"></div>
+          <h3>Main Feature</h3>
+          <p>Primary feature description goes here. This is the most important aspect of your product.</p>
+        </div>
+        <div class="grid-item">
+          <div class="placeholder-img"></div>
+          <h3>Feature Two</h3>
+          <p>Secondary feature description.</p>
+        </div>
+        <div class="grid-item">
+          <div class="placeholder-img"></div>
+          <h3>Feature Three</h3>
+          <p>Another important feature.</p>
+        </div>
+        <div class="grid-item">
+          <div class="placeholder-img"></div>
+          <h3>Feature Four</h3>
+          <p>Additional feature description.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Step One</h3>
+        <p>First step description of the process.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Step Two</h3>
+        <p>Second step description of the process.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Step Three</h3>
+        <p>Third step description of the process.</p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Testimonials</h2>
+      <div class="carousel-container">
+        <div class="carousel" id="testimonialCarousel">
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="placeholder-img"></div>
+              <p>"Amazing service and great results!"</p>
+              <span class="author">- John Doe</span>
+              <button class="btn-secondary">Read More</button>
             </div>
-        </div>
-    </section>
-    
-    <section id="steps" class="steps">
-        <div class="container">
-            <h2>Passos do Processo</h2>
-            <div class="steps-grid">
-                <div class="step">Passo 1</div>
-                <div class="step">Passo 2</div>
-                <div class="step">Passo 3</div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="placeholder-img"></div>
+              <p>"Exceeded our expectations!"</p>
+              <span class="author">- Jane Smith</span>
+              <button class="btn-secondary">Read More</button>
             </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="placeholder-img"></div>
+              <p>"Best decision we've made!"</p>
+              <span class="author">- Mike Johnson</span>
+              <button class="btn-secondary">Read More</button>
+            </div>
+          </div>
         </div>
-    </section>
-    
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <form>
-                <input type="text" placeholder="Seu Nome">
-                <input type="email" placeholder="Seu E-mail">
-                <textarea placeholder="Sua Mensagem"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+        <div class="carousel-controls">
+          <button class="carousel-control" data-direction="prev">&lt;</button>
+          <div class="carousel-dots"></div>
+          <button class="carousel-control" data-direction="next">&gt;</button>
         </div>
+      </div>
     </section>
-    
-    <footer class="footer">
-        <p>&copy; 2025 Meu Nome - Todos os direitos reservados.</p>
-    </footer>
+
+    <section class="cta">
+      <h2>Create Your Free Account</h2>
+      <form id="signup-form" class="signup-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Create Password" required>
+        <button type="submit" class="btn-primary">Get Started Now</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="logo">LOGO</div>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
