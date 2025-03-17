@@ -4,134 +4,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Landing Page Wireframe</title>
+  <title>Archi - Expert Woodworking</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <header class="header">
-    <nav class="nav">
-      <div class="logo">LOGO</div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/axe.svg" alt="Archi"
+          class="logo-icon">
+        <span>ARCHI</span>
+      </div>
       <div class="nav-links">
-        <a href="#" class="nav-link">Features</a>
-        <a href="#" class="nav-link">Pricing</a>
-        <a href="#" class="nav-link">Resources</a>
-        <a href="#" class="nav-link">About</a>
+        <a href="#" class="active">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact Us</a>
       </div>
-      <button class="btn-primary">Sign In</button>
-    </nav>
-  </header>
+      <div class="phone">
+        <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone.svg" alt="phone"
+          class="phone-icon">
+        <span>1200.900.9000</span>
+      </div>
+    </div>
+  </nav>
 
-  <main>
-    <section class="hero">
-      <h1>Website Landing Page<br>Wireframe.</h1>
-      <p class="hero-text">Test out your wireframe and prototype of a landing page website. Share your design with your
-        team and get feedback before development starts.</p>
-      <div class="search-box">
-        <input type="text" placeholder="Enter your email..." class="search-input">
-        <button class="btn-primary">Send</button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Expert hands, creating timeless woodwork</h1>
+        <p>With over 20 years of experience in the woodworking industry, we promise to transform your ideas into
+          stunning, functional pieces that stand the test of time.</p>
+        <button class="btn">Our Services</button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="features">
-      <h2>Features</h2>
-      <div class="hierarchical-grid">
-        <div class="grid-item grid-item-large">
-          <div class="placeholder-img"></div>
-          <h3>Main Feature</h3>
-          <p>Primary feature description goes here. This is the most important aspect of your product.</p>
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/armchair.svg" alt="Detail"
+            class="feature-icon">
+          <h3>Attention to Detail</h3>
+          <p>Aliqua non molestie ea noxin lorem ipsum ea dolor sit amet nulla dolor consequat molestiet deserunt in
+            tempor.</p>
         </div>
-        <div class="grid-item">
-          <div class="placeholder-img"></div>
-          <h3>Feature Two</h3>
-          <p>Secondary feature description.</p>
+        <div class="feature-card">
+          <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/grid-2x2.svg" alt="Materials"
+            class="feature-icon">
+          <h3>High-Quality Materials</h3>
+          <p>Aliqua non molestie ea noxin lorem ipsum ea dolor sit amet nulla dolor consequat molestiet deserunt in
+            tempor.</p>
         </div>
-        <div class="grid-item">
-          <div class="placeholder-img"></div>
-          <h3>Feature Three</h3>
-          <p>Another important feature.</p>
+        <div class="feature-card">
+          <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/user-check.svg" alt="Service"
+            class="feature-icon">
+          <h3>Personalized Service</h3>
+          <p>Aliqua non molestie ea noxin lorem ipsum ea dolor sit amet nulla dolor consequat molestiet deserunt in
+            tempor.</p>
         </div>
-        <div class="grid-item">
-          <div class="placeholder-img"></div>
-          <h3>Feature Four</h3>
-          <p>Additional feature description.</p>
+        <div class="feature-card">
+          <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/dollar-sign.svg" alt="Price"
+            class="feature-icon">
+          <h3>Affordable Price</h3>
+          <p>Aliqua non molestie ea noxin lorem ipsum ea dolor sit amet nulla dolor consequat molestiet deserunt in
+            tempor.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Step One</h3>
-        <p>First step description of the process.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Step Two</h3>
-        <p>Second step description of the process.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Step Three</h3>
-        <p>Third step description of the process.</p>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <h2>Testimonials</h2>
-      <div class="carousel-container">
-        <div class="carousel" id="testimonialCarousel">
-          <div class="carousel-item">
-            <div class="testimonial-card">
-              <div class="placeholder-img"></div>
-              <p>"Amazing service and great results!"</p>
-              <span class="author">- John Doe</span>
-              <button class="btn-secondary">Read More</button>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial-card">
-              <div class="placeholder-img"></div>
-              <p>"Exceeded our expectations!"</p>
-              <span class="author">- Jane Smith</span>
-              <button class="btn-secondary">Read More</button>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial-card">
-              <div class="placeholder-img"></div>
-              <p>"Best decision we've made!"</p>
-              <span class="author">- Mike Johnson</span>
-              <button class="btn-secondary">Read More</button>
-            </div>
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492" alt="Custom Furniture">
+          <div class="service-content">
+            <h3>Custom Furniture Design</h3>
+            <p>Ut enim dolore anim ut molestiet labore anim tempor nisi ut et elit duis ea ex nox laborum ea</p>
+            <button class="btn">Request Quote</button>
           </div>
         </div>
-        <div class="carousel-controls">
-          <button class="carousel-control" data-direction="prev">&lt;</button>
-          <div class="carousel-dots"></div>
-          <button class="carousel-control" data-direction="next">&gt;</button>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf" alt="Home Renovation">
+          <div class="service-content">
+            <h3>Home Renovation Projects</h3>
+            <p>Ut enim dolore anim ut molestiet labore anim tempor nisi ut et elit duis ea ex nox laborum ea</p>
+            <button class="btn">Request Quote</button>
+          </div>
+        </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492" alt="Wood Repair">
+          <div class="service-content">
+            <h3>Wood Repair & Restoration</h3>
+            <p>Ut enim dolore anim ut molestiet labore anim tempor nisi ut et elit duis ea ex nox laborum ea</p>
+            <button class="btn">Request Quote</button>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cta">
-      <h2>Create Your Free Account</h2>
-      <form id="signup-form" class="signup-form">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="password" placeholder="Create Password" required>
-        <button type="submit" class="btn-primary">Get Started Now</button>
-      </form>
-    </section>
-  </main>
+  <!-- Experience -->
+  <section class="experience">
+    <div class="container">
+      <div class="experience-grid">
+        <div class="experience-image">
+          <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492" alt="Experience">
+          <div class="experience-years">
+            <span>20</span>
+            <p>Years of Experience</p>
+          </div>
+        </div>
+        <div class="experience-content">
+          <h2>Custom Woodwork, Personalized for Your Home</h2>
+          <p>Lorem ipsum adipisicing consectetur tempor nulla molestie proident culpa ut dolor officia non ullamco aute
+            incididunt aliqua.</p>
+          <button class="btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>Our Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492" alt="Project 1">
+          <div class="project-overlay">
+            <button class="btn">View Project</button>
+          </div>
+        </div>
+        <!-- Repeat for other projects -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonial-slider" id="testimonialSlider">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>Dolor deserunt consectetur fugit molestiet quis velit fugiat laborum quis ut velit molestie</p>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/100?img=1" alt="John Smith">
+            <div>
+              <h4>John Smith</h4>
+              <p>Customer</p>
+            </div>
+          </div>
+        </div>
+        <!-- More testimonials will be added by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
+    <div class="cta-banner">
+      <div class="container">
+        <h3>We Are the Leading of Carpenter Company</h3>
+        <button class="btn btn-white">CONTACT US NOW</button>
+      </div>
+    </div>
     <div class="footer-content">
-      <div class="logo">LOGO</div>
-      <div class="footer-links">
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
-        <a href="#">Contact</a>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <div class="logo">
+              <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/axe.svg" alt="Archi"
+                class="logo-icon">
+              <span>ARCHI</span>
+            </div>
+            <p>We are passionately transforming spaces into stunning, functional, and personalized environments.</p>
+          </div>
+          <div class="footer-news">
+            <h4>Latest News</h4>
+            <ul>
+              <li>The Elements Interior Design Tips</li>
+              <li>8 Unique Ways to Display TV</li>
+              <li>The Illusion to Kitchen Design</li>
+              <li>Make a huge impact With Multiples</li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <address>
+              <p>100 S Main St, Los Angeles, CA</p>
+              <p>Phone: (208) 333.9296</p>
+              <p>Fax: (208) 333.9296</p>
+              <p>Email: contact@archi-carpenter.com</p>
+              <p>Web: https://archi-carpenter.com</p>
+            </address>
+          </div>
+          <div class="footer-services">
+            <h4>Our Services</h4>
+            <ul>
+              <li>Custom Furniture Design</li>
+              <li>Home Renovation</li>
+              <li>Commercial Carpentry</li>
+              <li>Wood Repair & Restoration</li>
+              <li>Woodworking and Detailing</li>
+              <li>Interior Improvements</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© Premium Website Template by Designesia</p>
+          <div class="social-icons">
+            <a href="#"><img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/facebook.svg"
+                alt="Facebook"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/twitter.svg"
+                alt="Twitter"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/instagram.svg"
+                alt="Instagram"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/youtube.svg"
+                alt="YouTube"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/linkedin.svg"
+                alt="LinkedIn"></a>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
