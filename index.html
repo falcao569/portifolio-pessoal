@@ -145,32 +145,30 @@
             <button class="btn">View Project</button>
           </div>
         </div>
-        <!-- Repeat for other projects -->
         <div class="project-card">
           <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492" alt="Project 1">
           <div class="project-overlay">
             <button class="btn">View Project</button>
           </div>
         </div>
-        <!-- Repeat for other projects --><div class="project-card">
+        <div class="project-card">
           <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492" alt="Project 1">
           <div class="project-overlay">
             <button class="btn">View Project</button>
           </div>
         </div>
-        <!-- Repeat for other projects --><div class="project-card">
+        <div class="project-card">
           <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492" alt="Project 1">
           <div class="project-overlay">
             <button class="btn">View Project</button>
           </div>
         </div>
-        <!-- Repeat for other projects --><div class="project-card">
+        <div class="project-card">
           <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492" alt="Project 1">
           <div class="project-overlay">
             <button class="btn">View Project</button>
           </div>
         </div>
-        <!-- Repeat for other projects -->
       </div>
     </div>
   </section>
@@ -178,19 +176,55 @@
   <!-- Testimonials -->
   <section class="testimonials">
     <div class="container">
+      <h2 class="text-center text-4xl font-bold mb-16">What Our Clients Say</h2>
       <div class="testimonial-slider" id="testimonialSlider">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>Dolor deserunt consectetur fugit molestiet quis velit fugiat laborum quis ut velit molestie</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/100?img=1" alt="John Smith">
-            <div>
-              <h4>John Smith</h4>
-              <p>Customer</p>
-            </div>
+        <!-- Testimonials will be inserted by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-info-item">
+            <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin.svg" alt="location">
+            <p>100 S Main St, Los Angeles, CA</p>
+          </div>
+          <div class="contact-info-item">
+            <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/phone.svg" alt="phone">
+            <p>(208) 333.9296</p>
+          </div>
+          <div class="contact-info-item">
+            <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mail.svg" alt="email">
+            <p>contact@archi-carpenter.com</p>
+          </div>
+          <div class="contact-info-item">
+            <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/clock.svg" alt="hours">
+            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
           </div>
         </div>
-        <!-- More testimonials will be added by JavaScript -->
+
+        <div class="contact-form">
+          <form onsubmit="validateForm(event)">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
