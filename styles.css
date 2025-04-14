@@ -1,15 +1,15 @@
 /* Reset and base styles */
 :root {
-    --brown-50: #faf6f3;
-    --brown-100: #f0e6e0;
-    --brown-200: #e1cec3;
-    --brown-300: #d1b5a6;
-    --brown-400: #c29c89;
-    --brown-500: #b3836c;
-    --brown-600: #a46a4f;
-    --brown-700: #8a563d;
-    --brown-800: #70422b;
-    --brown-900: #562e19;
+    --brown-50: #f5f7fa;
+    --brown-100: ##e4eaf3;
+    --brown-200: ##ccd7ec;
+    --brown-300: #aabbe0;
+    --brown-400: #728ed1;
+    --brown-500: #3b61c1;
+    --brown-600: #2e4da1;
+    --brown-700: #233c7f;
+    --brown-800: #192b5d;
+    --brown-900: #0e1b3c;
 }
 
 * {
@@ -51,25 +51,53 @@ body {
 }
 
 .btn-white:hover {
-    background-color: #f8f8f8;
+    background-color: #0D3E59;
 }
 
 /* Navbar */
 .navbar {
-    background: white;
+    background: rgba(14, 27, 60, 0.8) !important; /* 0.8 é a opacidade */
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    /* Neon border settings */
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, transparent, #4CD1F9, transparent) 1;
+    animation: borderMove 10s linear infinite;
 }
 
+
+/* Container da navbar */
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
+
+/* Reutilizando o keyframe do efeito neon */
+@keyframes borderMove {
+    0% {
+        border-image-source: linear-gradient(90deg, transparent, #4CD1F9, transparent);
+    }
+    25% {
+        border-image-source: linear-gradient(180deg, transparent, #4CD1F9, transparent);
+    }
+    50% {
+        border-image-source: linear-gradient(270deg, transparent, #4CD1F9, transparent);
+    }
+    75% {
+        border-image-source: linear-gradient(0deg, transparent, #4CD1F9, transparent);
+    }
+    100% {
+        border-image-source: linear-gradient(90deg, transparent, #4CD1F9, transparent);
+    }
+}
+
 
 .logo {
     display: flex;
@@ -88,20 +116,20 @@ body {
 }
 
 .nav-links a {
-    color: #333;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--brown-600);
+    color: white;
 }
 
 .phone {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--brown-600);
+    color: white;
 }
 
 .phone-icon {
@@ -111,14 +139,26 @@ body {
 
 /* Hero Section */
 .hero {
+    position: relative;
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492') center/cover;
+                url('assets/ChatGPT Image 14 de abr. de 2025, 15_26_56.png') center/cover;
     display: flex;
     align-items: center;
     color: white;
     background-attachment: fixed;
+    z-index: 1;
+    overflow: hidden;
 }
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(7, 9, 46, 0.6); /* #07092E com opacidade */
+    z-index: -1; /* Coloca atrás do conteúdo, mas na frente da imagem */
+}
+
 
 .hero-content {
     max-width: 600px;
@@ -148,16 +188,44 @@ body {
 }
 
 .feature-card {
-    background: var(--brown-600);
+    background: var(--brown-900);
     padding: 2rem;
     border-radius: 0.5rem;
     color: white;
+    border: 2px solid;
+    border-image: linear-gradient(90deg, 
+        transparent, 
+        #4CD1F9, 
+        transparent
+    ) 1;
+    animation: borderMove 8s linear infinite;
+    position: relative;
+}
+
+@keyframes borderMove {
+    10% {
+        border-image-source: linear-gradient(90deg, transparent, #4CD1F9, transparent);
+    }
+    25% {
+        border-image-source: linear-gradient(180deg, transparent, #4CD1F9, transparent);
+    }
+    50% {
+        border-image-source: linear-gradient(270deg, transparent, #4CD1F9, transparent);
+    }
+    75% {
+        border-image-source: linear-gradient(1deg, transparent, #4CD1F9, transparent);
+    }
+    100% {
+        border-image-source: linear-gradient(90deg, transparent, #4CD1F9, transparent);
+    }
 }
 
 .feature-icon {
     width: 2rem;
     height: 2rem;
     margin-bottom: 1rem;
+    color: white !important; /* Força branco caso venha de SVG ou ícone externo */
+    fill: white!important; /* Se for SVG */
 }
 
 .feature-card h3 {
