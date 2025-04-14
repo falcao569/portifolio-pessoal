@@ -176,18 +176,21 @@ body {
 
 /* Features */
 .features {
-    margin-top: -6rem;
+    margin-top: 0px;
     position: relative;
     z-index: 2;
+    background-color: #0e1b3c;
 }
 
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    padding-bottom: 20px;
 }
 
 .feature-card {
+    margin-top: -128px;
     background: var(--brown-900);
     padding: 2rem;
     border-radius: 0.5rem;
@@ -200,7 +203,16 @@ body {
     ) 1;
     animation: borderMove 8s linear infinite;
     position: relative;
+    /* Box shadow adicionado */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.99);
 }
+@media (max-width: 768px) {
+  .feature-card {
+    margin-top: -65px;
+    margin-bottom: 65px;
+  }
+}
+
 
 @keyframes borderMove {
     10% {
@@ -235,7 +247,8 @@ body {
 /* Services */
 .services {
     padding: 6rem 0;
-    background: white;
+    background-color: var(--brown-00)!important;
+
 }
 
 .services h2 {
