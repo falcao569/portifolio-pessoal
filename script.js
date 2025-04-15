@@ -28,7 +28,6 @@ const testimonials = [
 
 let currentTestimonial = 0
 
-// Initialize testimonials
 function initializeTestimonials() {
   updateTestimonialSlide()
 
@@ -50,7 +49,6 @@ function initializeTestimonials() {
   const slider = document.getElementById("testimonialSlider")
   slider.parentElement.appendChild(navigation)
 
-  // Add dots navigation
   const dotsContainer = document.createElement("div")
   dotsContainer.className = "testimonial-dots"
 
@@ -65,7 +63,6 @@ function initializeTestimonials() {
 
   slider.parentElement.appendChild(dotsContainer)
 
-  // Auto advance slides
   setInterval(nextTestimonial, 5000)
 }
 
@@ -73,28 +70,31 @@ function updateTestimonialSlide() {
   const slider = document.getElementById("testimonialSlider")
   slider.innerHTML = ""
 
-  // Show 3 testimonials at a time
-  for (let i = 0; i < 3; i++) {
+  const testimonialsToShow = window.innerWidth < 768 ? 1 : 3
+
+  for (let i = 0; i < testimonialsToShow; i++) {
     const index = (currentTestimonial + i) % testimonials.length
     const testimonial = testimonials[index]
 
     const testimonialCard = document.createElement("div")
     testimonialCard.className = "testimonial-card"
+    if (i === Math.floor(testimonialsToShow / 2)) {
+      testimonialCard.classList.add("active")
+    }
     testimonialCard.innerHTML = `
-            <div class="stars">★★★★★</div>
-            <p>${testimonial.text}</p>
-            <div class="testimonial-author">
-                <img src="${testimonial.avatar}" alt="${testimonial.name}">
-                <div>
-                    <h4>${testimonial.name}</h4>
-                    <p>${testimonial.role}</p>
-                </div>
-            </div>
-        `
+      <div class="stars">★★★★★</div>
+      <p>${testimonial.text}</p>
+      <div class="testimonial-author">
+        <img src="${testimonial.avatar}" alt="${testimonial.name}">
+        <div>
+          <h4>${testimonial.name}</h4>
+          <p>${testimonial.role}</p>
+        </div>
+      </div>
+    `
     slider.appendChild(testimonialCard)
   }
 
-  // Update dots
   const dots = document.querySelectorAll(".testimonial-dot")
   dots.forEach((dot, index) => {
     dot.classList.toggle("active", index === currentTestimonial)
@@ -117,7 +117,6 @@ function goToTestimonial(index) {
   updateTestimonialSlide()
 }
 
-// Form validation
 function validateForm(event) {
   event.preventDefault()
   const form = event.target
@@ -135,25 +134,20 @@ function validateForm(event) {
     return
   }
 
-  // Here you would typically send the form data to a server
   alert("Thank you for your message! We will get back to you soon.")
   form.reset()
 }
 
-// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault()
     const target = document.querySelector(this.getAttribute("href"))
     if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-      })
+      target.scrollIntoView({ behavior: "smooth" })
     }
   })
 })
 
-// Navbar scroll effect
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar")
   if (window.scrollY > 50) {
@@ -165,7 +159,10 @@ window.addEventListener("scroll", () => {
   }
 })
 
-// Initialize when DOM is loaded
+window.addEventListener("resize", () => {
+  updateTestimonialSlide()
+})
+
 document.addEventListener("DOMContentLoaded", () => {
   initializeTestimonials()
 })
