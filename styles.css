@@ -193,7 +193,7 @@ body {
 .feature-card {
     margin-top: -128px;
     background: var(--brown-900);
-    padding: 2rem;
+    padding: 1.6rem;
     border-radius: 0.5rem;
     color: white;
     border: 2px solid;
