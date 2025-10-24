@@ -52,7 +52,8 @@ body {
 }
 
 .btn-white:hover {
-    background-color: #0D3E59;
+    background-color: #032233;
+    color: white;
 }
 
 /* Navbar */
@@ -322,6 +323,10 @@ body {
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-align: center;
+    /* Borda animada */
+    border: 2px solid transparent;
+    border-image-slice: 1;
+    animation: borderMove 6s linear infinite;
 }
 
 .experience-years span {
@@ -363,6 +368,11 @@ body {
     overflow: hidden;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    aspect-ratio: 1 / 1; /* Mantém o formato quadrado */
+    /* Borda animada */
+    border: 1.5px solid transparent;
+    border-image-slice: 1;
+    animation: borderMove 6s linear infinite;
 }
 
 .project-card img {
@@ -398,6 +408,12 @@ body {
     position: relative;
     text-align: center;
 }
+
+.testimonials .role,
+.testimonials .text {
+  color: #0E1B3C!important;
+}
+
 
 .testimonials h2 {
     font-size: 2.5rem;
@@ -467,6 +483,7 @@ body {
 }
 
 .testimonial-author {
+  color: #4b5563;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -487,7 +504,7 @@ body {
 }
 
 .testimonial-author p {
-  color: #6b7280;
+  color: #4b5563;
   margin: 0;
   font-size: 0.875rem;
 }
@@ -644,7 +661,7 @@ body {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -782,4 +799,18 @@ body {
         gap: 1rem;
         text-align: center;
     }
+}
+/* Força a cor desejada nos textos dos depoimentos e roles */
+.testimonials .testimonial-card .text,
+.testimonials .testimonial-card p,
+.testimonials .testimonial-card .role,
+.testimonials .testimonial-card .testimonial-author h4,
+.testimonials .testimonial-card .testimonial-author p {
+  color: #0E1B3C !important;
+}
+
+/* se o "role" ou "text" estiverem como classes diferentes */
+.testimonials .role,
+.testimonials .text {
+  color: #0E1B3C !important;
 }
