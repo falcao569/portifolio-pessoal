@@ -2,27 +2,27 @@
 const testimonials = [
   {
     avatar: "https://i.pravatar.cc/100?img=1",
-    name: "John Smith",
-    role: "Customer",
-    text: "Dolor deserunt consectetur fugit molestiet quis velit fugiat laborum quis ut velit molestie",
+    name: "Jorge Alves",
+    role: "Diretor Geral",
+    text: "O João entregou nosso site institucional com uma qualidade excelente. Foi rápido, profissional e cuidou de cada detalhe, desde a estrutura até a identidade visual.",
   },
   {
-    avatar: "https://i.pravatar.cc/100?img=2",
-    name: "Jane Smith",
-    role: "Customer",
-    text: "Dolor deserunt consectetur fugit molestiet quis velit fugiat laborum quis ut velit molestie",
+    avatar: "https://i.pravatar.cc/100?img=9",
+    name: "Janaina Sandrini",
+    role: "Publicitária",
+    text: "Precisei de uma landing page para divulgação de um curso e o resultado ficou incrível. Além do design, ele pensou toda a experiência do usuário para aumentar conversão.",
   },
   {
     avatar: "https://i.pravatar.cc/100?img=3",
-    name: "Mike Smith",
-    role: "Customer",
-    text: "Dolor deserunt consectetur fugit molestiet quis velit fugiat laborum quis ut velit molestie",
+    name: "Mariano Garcia",
+    role: "Designer",
+    text: "O João tem olhar muito apurado para responsividade e performance. O site ficou leve, bonito e fácil de navegar. Recomendo totalmente!",
   },
   {
     avatar: "https://i.pravatar.cc/100?img=4",
-    name: "Sarah Smith",
-    role: "Customer",
-    text: "Dolor deserunt consectetur fugit molestiet quis velit fugiat laborum quis ut velit molestie",
+    name: "Sara Bueno",
+    role: "UX Designer",
+    text: "Excelente comunicação e ótimo entendimento de UX. Ele conseguiu transformar o briefing em um layout funcional e moderno, mantendo a identidade da marca.",
   },
 ]
 
