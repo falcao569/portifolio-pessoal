@@ -160,6 +160,12 @@ body {
     background-color: rgba(0, 2, 19, 0.884); /* #07092E com opacidade */
     z-index: -1; /* Coloca atrás do conteúdo, mas na frente da imagem */
 }
+@media (max-width: 768px) {
+  .hero::before {
+    background-color: rgba(0, 2, 19, 0.568); /* diminui a opacidade no mobile */
+  }
+}
+
 
 
 .hero-content {
